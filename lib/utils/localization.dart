@@ -1,0 +1,68 @@
+const Map<String, Map<String, String>> translations = {
+  'app_title': {'en': 'WordMixle', 'da': 'WordMixle'},
+  'home': {'en': 'Home', 'da': 'Hjem'},
+  'settings': {'en': 'Settings', 'da': 'Indstillinger'},
+  'level': {'en': 'Level', 'da': 'Level'},
+  'levels': {'en': 'Levels', 'da': 'Levels'},
+  'easy': {'en': 'Easy', 'da': 'Let'},
+  'medium': {'en': 'Medium', 'da': 'Mellem'},
+  'hard': {'en': 'Hard', 'da': 'Svær'},
+  'you_won': {'en': 'You Won! 🎉', 'da': 'Du vandt! 🎉'},
+  'you_lost': {'en': 'Game Over', 'da': 'Spil slut'},
+  'next_level': {'en': 'Next Level', 'da': 'Næste level'},
+  'try_again': {'en': 'Try Again', 'da': 'Prøv igen'},
+  'retry': {'en': 'Retry', 'da': 'Prøv igen'},
+  'try_again_msg': {'en': 'Nice try!', 'da': 'Godt forsøg!'},
+  'attempts': {'en': 'attempts', 'da': 'forsøg'},
+  'back': {'en': 'Back', 'da': 'Tilbage'},
+  'dark_mode': {'en': 'Dark Mode', 'da': 'Mørk tilstand'},
+  'language': {'en': 'Language', 'da': 'Sprog'},
+  'english': {'en': 'English', 'da': 'Engelsk'},
+  'danish': {'en': 'Danish', 'da': 'Dansk'},
+  'progress': {'en': 'Progress', 'da': 'Fremgang'},
+  'locked': {'en': 'Locked', 'da': 'Låst'},
+  'completed': {'en': 'Completed', 'da': 'Gennemført'},
+  'answer_was': {'en': 'The answer was', 'da': 'Svaret var'},
+  'guess_the_word': {'en': 'Guess the word', 'da': 'Gæt ordet'},
+  'guess_the_number': {'en': 'Guess the number', 'da': 'Gæt tallet'},
+  'guess_the_synonym': {'en': 'Guess the synonym', 'da': 'Gæt synonymet'},
+  'guess_the_definition': {'en': 'Guess the word', 'da': 'Gæt ordet fra definitionen'},
+  'unscramble': {'en': 'Unscramble the letters', 'da': 'Sæt bogstaverne i orden'},
+  'guess_from_emoji': {'en': 'Guess from emojis', 'da': 'Gæt ud fra emojis'},
+  'guess_from_picture': {'en': 'What does this represent?', 'da': 'Hvad forestiller dette?'},
+  'reset_progress': {'en': 'Reset Progress', 'da': 'Nulstil fremgang'},
+  'reset_confirm': {'en': 'Are you sure? This cannot be undone.', 'da': 'Er du sikker? Dette kan ikke fortrydes.'},
+  'cancel': {'en': 'Cancel', 'da': 'Annuller'},
+  'reset': {'en': 'Reset', 'da': 'Nulstil'},
+  'clue': {'en': 'Clue', 'da': 'Ledetråd'},
+  'how_to_play': {'en': 'How to play', 'da': 'Sådan spiller du'},
+  'close': {'en': 'Close', 'da': 'Luk'},
+  'desc_classicWordle': {
+    'en': 'Guess the hidden 5-letter word. After each guess, the tiles change color: green = correct letter & position, yellow = correct letter but wrong position, grey = letter not in the word.',
+    'da': 'Gæt det skjulte 5-bogstavsord. Efter hvert gæt skifter felterne farve: grøn = rigtigt bogstav & placering, gul = rigtigt bogstav men forkert placering, grå = bogstavet er ikke i ordet.',
+  },
+  'desc_emojiLink': {
+    'en': 'You are shown emoji clues that hint at a word. Figure out the word from the emojis and type it in. Color feedback works the same as Classic Wordle.',
+    'da': 'Du får vist emoji-ledetråde der hinter til et ord. Find ud af ordet fra emojierne og skriv det ind. Farvefeedback fungerer som i Classic Wordle.',
+  },
+  'desc_numberle': {
+    'en': 'Guess a hidden 5-digit number. Use the number keyboard to type your guess. Green = correct digit & position, yellow = digit exists but wrong position, grey = digit not in the number.',
+    'da': 'Gæt et skjult 5-cifret tal. Brug taltastaturet til at skrive dit gæt. Grøn = rigtigt ciffer & placering, gul = cifferet findes men forkert placering, grå = cifferet er ikke i tallet.',
+  },
+  'desc_pictureWordle': {
+    'en': 'A single emoji or picture represents a word. Study the image and guess the word it represents. Color feedback helps you narrow it down.',
+    'da': 'En enkelt emoji eller billede repræsenterer et ord. Studér billedet og gæt det ord det forestiller. Farvefeedback hjælper dig med at indsnævre det.',
+  },
+  'desc_synonym': {
+    'en': 'You are given a synonym clue word. Guess the 5-letter word that means the same thing. Color feedback works the same as Classic Wordle.',
+    'da': 'Du får et synonymord som ledetråd. Gæt det 5-bogstavsord der betyder det samme. Farvefeedback fungerer som i Classic Wordle.',
+  },
+  'desc_definition': {
+    'en': 'You are given a short definition. Guess the 5-letter word it describes. Color feedback works the same as Classic Wordle.',
+    'da': 'Du får en kort definition. Gæt det 5-bogstavsord den beskriver. Farvefeedback fungerer som i Classic Wordle.',
+  },
+};
+
+String tr(String key, String locale) {
+  return translations[key]?[locale] ?? translations[key]?['en'] ?? key;
+}
